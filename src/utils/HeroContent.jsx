@@ -1,8 +1,8 @@
-import { Box, Typography, Chip, Button } from "@mui/material";
+import { Box, Typography, Chip } from "@mui/material";
 import { motion } from "framer-motion";
-import Typical from "react-typical";
 import { grey } from "@mui/material/colors";
 import MotionModal from "./Modal";
+import { TypeAnimation } from "react-type-animation";
 
 // Variants for parent container (for stagger effect)
 const container = {
@@ -61,9 +61,16 @@ const AnimatedIntro = () => {
 
         <motion.div variants={item}>
           <Typography variant="h6" sx={{ mb: 0 }}>
-            <Typical
-              steps={["", 5000, "Network & technology student ! ", 1000]}
-              loop={1}
+            <TypeAnimation
+              sequence={[
+                " ",
+                4000, // wait 1s
+                "Network & technology student ! ",
+                1000,
+              ]}
+              wrapper="p"
+              speed={50}
+              repeat={Infinity}
             />
           </Typography>
         </motion.div>
@@ -88,7 +95,7 @@ const AnimatedIntro = () => {
         </motion.div>
 
         <motion.div variants={item}>
-            <MotionModal />
+          <MotionModal />
         </motion.div>
       </Box>
     </motion.div>

@@ -1,11 +1,9 @@
+import { Typography } from "@mui/material";
 import * as motion from "motion/react-client";
 
 export default function GesturesBox({ name, icon, delay }) {
-
-
   return (
     <motion.div
-
       initial={{ opacity: 0, y: -50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: delay }}
@@ -24,7 +22,7 @@ export default function GesturesBox({ name, icon, delay }) {
       }}
     >
       {icon}
-      {name}
+      <Typography> {name}</Typography>
     </motion.div>
   );
 }

@@ -1,19 +1,14 @@
 import {
-  AppBar,
-  Avatar,
   Box,
   Button,
-  Chip,
   Grid,
   IconButton,
-  Modal,
   Tab,
   Tabs,
   Typography,
 } from "@mui/material";
 import WelcomePage from "./pages/Welcome";
 import MainLayout from "./utils/mainLayout";
-import BinaryMatrix from "./utils/BinaryBg";
 import profileImg from "./assets/self-profile-img.jpg";
 import { grey } from "@mui/material/colors";
 import PathDrawing from "./utils/Shapes";
@@ -25,7 +20,6 @@ import ScrollLinked from "./utils/Scrolleffect";
 import { useState } from "react";
 import {
   Facebook,
-  Gesture,
   GitHub,
   Instagram,
   LinkedIn,
