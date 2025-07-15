@@ -8,7 +8,7 @@ import {
   Typography,
 } from "@mui/material";
 import WelcomePage from "./pages/Welcome";
-import MainLayout from "./utils/mainLayout";
+import MainLayout from "./utils/MainLayout";
 import profileImg from "./assets/self-profile-img.jpg";
 import { grey } from "@mui/material/colors";
 import PathDrawing from "./utils/Shapes";
