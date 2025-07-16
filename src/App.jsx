@@ -52,7 +52,11 @@ function App() {
         <WelcomePage />
         <Navbar />
         <MainLayout>
-          <Grid container sx={{ alignItems: "center", mt: { xs: 10, lg: 0 } }}>
+          <Grid
+            id="hero"
+            container
+            sx={{ alignItems: "center", mt: { xs: 10, lg: 0 } }}
+          >
             <Grid size={{ xs: 12, lg: 6 }} sx={{ backgroundColor: "" }}>
               <AnimatedIntro />
             </Grid>
@@ -61,7 +65,7 @@ function App() {
             </Grid>
           </Grid>
           <ScrollShow>
-            <Typography variant="body1" className="section-title">
+            <Typography id="about" variant="body1" className="section-title">
               About
             </Typography>
 
@@ -157,81 +161,75 @@ function App() {
             </Grid>
           </ScrollShow>
           <ScrollShow>
-            <Typography variant="h4" className="section-title">
+            <Typography variant="h4" className="section-title" id="skills">
               Skills
             </Typography>
 
             <Box sx={{ width: 1 }}>
-              <Box
+              <Tabs
+                value={value}
+                onChange={handleChange}
+                textColor="secondary"
+                indicatorColor="secondary"
+                variant="fullWidth"
                 sx={{
-                  width: 1,
+                  borderBottom: 1,
+                  borderColor: "divider",
                 }}
               >
-                <Tabs
-                  value={value}
-                  onChange={handleChange}
-                  textColor="secondary"
-                  indicatorColor="secondary"
-                  variant="fullWidth"
+                <Tab
+                  label="Skills"
+                  {...a11yProps(0)}
+                  sx={{ width: 250, backgroundColor: "rgba(0, 0, 0, 0.2)" }}
+                />
+                <Tab
+                  label="Projects"
+                  {...a11yProps(1)}
+                  sx={{ width: 250, backgroundColor: "rgba(0, 0, 0, 0.2)" }}
+                />
+              </Tabs>
+
+              <TabPanel value={value} index={0}>
+                <Box
                   sx={{
-                    borderBottom: 1,
-                    borderColor: "divider",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    flexWrap: "wrap",
+                    gap: 2,
                   }}
                 >
-                  <Tab
-                    label="Skills"
-                    {...a11yProps(0)}
-                    sx={{ width: 250, backgroundColor: "rgba(0, 0, 0, 0.2)" }}
-                  />
-                  <Tab
-                    label="Projects"
-                    {...a11yProps(1)}
-                    sx={{ width: 250, backgroundColor: "rgba(0, 0, 0, 0.2)" }}
-                  />
-                </Tabs>
-
-                <TabPanel value={value} index={0}>
-                  <Box
-                    sx={{
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      flexWrap: "wrap",
-                      gap: 2,
-                    }}
-                  >
-                    {icons.map((icon, index) => (
-                      <GesturesBox
-                        name={icon.name}
-                        icon={icon.icon}
-                        key={icon.id}
-                        delay={index * 0.1}
-                      />
-                    ))}
-                  </Box>
-                </TabPanel>
-                <TabPanel value={value} index={1}>
-                  <Box
-                    sx={{
-                      width: 1,
-                      height: 350,
-                      borderRadius: 4,
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      backgroundColor: "rgba(0,0,0,0.2)",
-                      backdropFilter: "blur(0.2rem)",
-                    }}
-                  >
-                    <LoadingThreeDotsPulse />
-                  </Box>
-                </TabPanel>
-              </Box>
+                  {icons.map((icon, index) => (
+                    <GesturesBox
+                      name={icon.name}
+                      icon={icon.icon}
+                      key={icon.id}
+                      delay={index * 0.1}
+                    />
+                  ))}
+                </Box>
+              </TabPanel>
+              <TabPanel value={value} index={1}>
+                <Box
+                  sx={{
+                    width: 1,
+                    height: 350,
+                    borderRadius: 4,
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    backgroundColor: "rgba(0,0,0,0.2)",
+                    backdropFilter: "blur(0.2rem)",
+                  }}
+                >
+                  <LoadingThreeDotsPulse />
+                </Box>
+              </TabPanel>
             </Box>
           </ScrollShow>
 
           <ScrollShow>
-            <Typography variant="h4" className="section-title">
+            <Typography variant="h4" className="section-title" id="contact">
               Contact me
             </Typography>
             <Box
@@ -288,11 +286,7 @@ function TabPanel(props) {
       aria-labelledby={`full-width-tab-${index}`}
       {...other}
     >
-      {value === index && (
-        <Box sx={{ p: 3 }}>
-          <Typography>{children}</Typography>
-        </Box>
-      )}
+      {value === index && <Box sx={{ p: 3 }}>{children}</Box>}
     </div>
   );
 }

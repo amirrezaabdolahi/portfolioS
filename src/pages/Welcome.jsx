@@ -72,8 +72,9 @@ const AnimatedTextPage = () => {
               <div
                 style={{
                   display: "flex",
-                  gap: "4rem",
+                  gap: "1rem",
                   marginTop: "0.5rem",
+                  justifyContent : 'center'
                 }}
               >
                 <motion.h2

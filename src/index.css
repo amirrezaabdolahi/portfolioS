@@ -1,5 +1,7 @@
 /* styles.css */
-
+html {
+  scroll-behavior: smooth;
+}
 body {
   background: #6441a5; /* fallback for old browsers */
   background: -webkit-linear-gradient(
@@ -58,4 +60,20 @@ body {
   width: max-content;
   font-weight: bold !important;
   margin: 10rem auto 0 auto !important;
+  padding-top: 5rem;
+}
+
+.nav-item {
+  color: #fff !important;
+  transition: color 250ms ease-in-out;
+  user-select: none;
+}
+.nav-item:hover {
+  color: #c2c2c2 !important;
+  cursor: pointer;
+}
+
+.nav-item--active {
+  color: #fff !important;
+  border-bottom: 3px solid #ffff00;
 }

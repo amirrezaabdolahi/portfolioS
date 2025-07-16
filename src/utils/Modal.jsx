@@ -1,6 +1,6 @@
 // MotionModal.js
-import React, { useState } from "react";
-import { Modal, Box, Button, Typography } from "@mui/material";
+import { useState } from "react";
+import { Modal, Box, Button } from "@mui/material";
 import { motion, AnimatePresence } from "framer-motion";
 import { Send } from "@mui/icons-material";
 import { grey } from "@mui/material/colors";

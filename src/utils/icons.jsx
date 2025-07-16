@@ -32,8 +32,8 @@ const icons = [
             gradientTransform="scale(.71111)"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#fff"></stop>
-            <stop offset="1" stop-color="#fff" stop-opacity="0"></stop>
+            <stop stopColor="#fff"></stop>
+            <stop offset="1" stopColor="#fff" stopOpacity="0"></stop>
           </linearGradient>
           <linearGradient
             id="b"
@@ -44,8 +44,8 @@ const icons = [
             gradientTransform="scale(.71111)"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#fff"></stop>
-            <stop offset="1" stop-color="#fff" stop-opacity="0"></stop>
+            <stop stopColor="#fff"></stop>
+            <stop offset="1" stopColor="#fff" stopOpacity="0"></stop>
           </linearGradient>
         </defs>
       </svg>
@@ -134,8 +134,8 @@ const icons = [
             gradientTransform="translate(1.11 14.613) scale(.24566)"
             gradientUnits="userSpaceOnUse"
           >
-            <stop offset="0" stop-color="#9013fe"></stop>
-            <stop offset="1" stop-color="#6610f2"></stop>
+            <stop offset="0" stopColor="#9013fe"></stop>
+            <stop offset="1" stopColor="#6610f2"></stop>
           </linearGradient>
           <linearGradient
             id="b"
@@ -146,8 +146,8 @@ const icons = [
             gradientTransform="translate(0 52)"
             gradientUnits="userSpaceOnUse"
           >
-            <stop offset="0" stop-color="#fff"></stop>
-            <stop offset="1" stop-color="#f1e5fc"></stop>
+            <stop offset="0" stopColor="#fff"></stop>
+            <stop offset="1" stopColor="#f1e5fc"></stop>
           </linearGradient>
           <filter
             id="c"
@@ -155,10 +155,10 @@ const icons = [
             height="249"
             x="161.9"
             y="135.46"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
             filterUnits="userSpaceOnUse"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+            <feFlood floodOpacity="0" result="BackgroundImageFix"></feFlood>
             <feColorMatrix
               in="SourceAlpha"
               values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
@@ -229,8 +229,8 @@ const icons = [
             gradientTransform="translate(0 .937) scale(.3122)"
             gradientUnits="userSpaceOnUse"
           >
-            <stop offset="0" stop-color="#41d1ff"></stop>
-            <stop offset="1" stop-color="#bd34fe"></stop>
+            <stop offset="0" stopColor="#41d1ff"></stop>
+            <stop offset="1" stopColor="#bd34fe"></stop>
           </linearGradient>
           <linearGradient
             id="b"
@@ -241,9 +241,9 @@ const icons = [
             gradientTransform="translate(0 .937) scale(.3122)"
             gradientUnits="userSpaceOnUse"
           >
-            <stop offset="0" stop-color="#ffea83"></stop>
-            <stop offset=".083" stop-color="#ffdd35"></stop>
-            <stop offset="1" stop-color="#ffa800"></stop>
+            <stop offset="0" stopColor="#ffea83"></stop>
+            <stop offset=".083" stopColor="#ffdd35"></stop>
+            <stop offset="1" stopColor="#ffa800"></stop>
           </linearGradient>
         </defs>
         <path
